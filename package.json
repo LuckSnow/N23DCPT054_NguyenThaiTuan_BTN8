@@ -1,0 +1,33 @@
+{
+  "name": "minisocial-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.10.0",
+    "bcryptjs": "^3.0.3",
+    "next": "15.5.23",
+    "pg": "^8.23.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-hook-form": "^7.62.0",
+    "server-only": "^0.0.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@next/swc-wasm-nodejs": "^15.5.23",
+    "@types/node": "^22.15.30",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.5.23",
+    "typescript": "^5.8.3"
+  }
+}
