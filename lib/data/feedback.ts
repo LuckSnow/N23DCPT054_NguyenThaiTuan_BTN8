@@ -8,6 +8,7 @@ export type CustomerFeedbackRecord = {
   phoneNumber: string;
   email?: string;
   category: string;
+  rating: number;
   content: string;
   createdAt: string;
 };
@@ -19,10 +20,22 @@ const inMemoryFeedbacks: CustomerFeedbackRecord[] = [
     fullName: "Nguyễn Văn An",
     phoneNumber: "0987654321",
     email: "an.nguyen@example.com",
-    category: "Giao diện website",
+    category: "Chất lượng sản phẩm & Dịch vụ",
+    rating: 5,
     content:
-      "Giao diện mạng xã hội rất đẹp mắt, các form nhập liệu phản hồi nhanh và thông báo lỗi rất rõ ràng.",
-    createdAt: new Date(Date.now() - 1000 * 60 * 30).toISOString(),
+      "Giao diện mua sắm và mạng xã hội rất đẹp mắt, các form nhập liệu phản hồi cực nhanh, tốc độ thanh toán mượt mà.",
+    createdAt: new Date(Date.now() - 1000 * 60 * 35).toISOString(),
+  },
+  {
+    id: "sample-2",
+    fullName: "Trần Thị Mai",
+    phoneNumber: "0912345678",
+    email: "mai.tran@example.com",
+    category: "Chăm sóc khách hàng & CSKH",
+    rating: 5,
+    content:
+      "Nhân viên hỗ trợ rất nhiệt tình và chu đáo, giải quyết thắc mắc về đơn hàng của tôi trong vòng chưa đầy 10 phút.",
+    createdAt: new Date(Date.now() - 1000 * 60 * 120).toISOString(),
   },
 ];
 
@@ -35,6 +48,7 @@ export async function insertCustomerFeedback(
     phoneNumber: data.phoneNumber,
     email: data.email ? data.email : undefined,
     category: data.category,
+    rating: Number(data.rating) || 5,
     content: data.content,
     createdAt: new Date().toISOString(),
   };
@@ -93,6 +107,7 @@ export async function getCustomerFeedbacks(): Promise<CustomerFeedbackRecord[]> 
       phoneNumber: row.phone_number,
       email: row.email ?? undefined,
       category: row.category,
+      rating: 5,
       content: row.content,
       createdAt: row.created_at.toISOString(),
     }));

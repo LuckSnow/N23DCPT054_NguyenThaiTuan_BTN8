@@ -40,8 +40,10 @@ export const customerFeedbackSchema = z.object({
   category: z
     .string()
     .trim()
-    .min(1, "Vui lòng chọn loại ý kiến góp ý.")
-    .default("Góp ý chất lượng dịch vụ"),
+    .min(1, "Vui lòng chọn loại dịch vụ cần góp ý.")
+    .default("Chất lượng sản phẩm & Dịch vụ"),
+
+  rating: z.coerce.number().min(1).max(5).default(5),
 
   content: z
     .string()

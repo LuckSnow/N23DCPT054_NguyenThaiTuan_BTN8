@@ -15,11 +15,6 @@ export default function LoginPage() {
 
       <p className="auth-switch">
         Chưa có tài khoản? <Link href="/register">Đăng ký</Link>
-        <span style={{ display: "block", marginTop: "0.5rem" }}>
-          <Link href="/feedback" style={{ color: "#2563eb", fontWeight: 600 }}>
-            📝 Góp ý khách hàng (Nhóm 8)
-          </Link>
-        </span>
       </p>
     </>
   );

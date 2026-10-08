@@ -17,11 +17,6 @@ export default function RegisterPage() {
 
       <p className="auth-switch">
         Đã có tài khoản? <Link href="/login">Đăng nhập</Link>
-        <span style={{ display: "block", marginTop: "0.5rem" }}>
-          <Link href="/feedback" style={{ color: "#2563eb", fontWeight: 600 }}>
-            📝 Góp ý khách hàng (Nhóm 8)
-          </Link>
-        </span>
       </p>
     </>
   );
